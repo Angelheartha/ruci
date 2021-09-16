@@ -23,7 +23,10 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('catalog.urls',include('catalog.urls')),
-    path('',RedirectView.as_view(url='/catalog/')),
-    static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
-]
+    #path('',RedirectView.as_view(url='/catalog/',permanent=True)),]\
+              #+static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
+    path('admin/',admin.site.urls),]
+
+
+
 
